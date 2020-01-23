@@ -1,0 +1,29 @@
+.c-article {
+    @include breakpoint(tablet) {
+        @include flexbox();
+        @include align-items(flex-end);
+        @include justify-content(space-between);
+        @include align-items(flex-end);
+        width: 100%;
+    }
+    @include breakpoint(desktop) {
+        @include align-items(flex-start);
+        @include justify-content(flex-start);
+    }
+}
+
+.c-article__content {
+    @include breakpoint(tablet) {
+        text-align: left;
+        max-width: 360px;
+    }
+    @include breakpoint(desktop) {
+        max-width: 600px;
+        margin-top: 92px;
+        margin-left: 95px;
+    }
+    @include breakpoint(desktop--lg) {
+        margin-top: 100px;
+        margin-left: 167px;
+    }
+}

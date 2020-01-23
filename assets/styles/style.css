@@ -1,0 +1,362 @@
+/*
+Author     : stefano
+Description: Purpose of the stylesheet follows.
+*/
+/*********************
+BREAKPOINTS
+*********************/
+/*********************
+TYPOGRAPHY
+*********************/
+/*********************
+BOX-MODEL
+*********************/
+/* Borders */
+/**
+ * ---------------------------------------------------
+ * 	Table of contents
+ * ---------------------------------------------------
+ */
+/**----------
+	3. Generic
+		3.1 base
+		3.2 Fonts
+		3.3 Typography
+		3.4 Helpers
+	4. Elements
+		4.1 Header 
+		4.2 Headings
+		4.3 Parags
+		4.4 Footer
+	5. Objects
+		5.1 Buttons
+	6. Components
+		6.1 Buttons
+		6.1 Forms elements
+	7. Utilities
+		7.1 utilities
+
+
+---------------*/
+/**
+ * ---------------------------------------------------
+ * 	3. generic
+ * ---------------------------------------------------
+ */
+/* --------------------- 3.1 Base --------------------- */
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * Basic styles for forms
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for images
+ */
+img {
+  max-width: 100%;
+}
+
+/**
+ * Basic styles for images
+ */
+picture {
+  display: block;
+}
+
+/**
+ * Basic styles for list
+ */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --------------------- 3.2 Fonts --------------------- */
+/* --------------------- 3.3 Typography --------------------- */
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 25px;
+}
+
+/* --------------------- 3.4 Helpers --------------------- */
+.u-show--mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .u-show--mobile {
+    display: none;
+  }
+}
+
+.u-show--tablet {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .u-show--tablet {
+    display: none;
+  }
+}
+
+.u-show--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .u-show--desktop {
+    display: block;
+  }
+}
+
+/**
+ * ---------------------------------------------------
+ * 	4. Elements
+ * ---------------------------------------------------
+ */
+/* --------------------- 4.1 Header --------------------- */
+/* --------------------- 4.2 headings --------------------- */
+.c-h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.17;
+  margin-bottom: 9px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-h2 {
+    font-size: 48px;
+    font-size: 4.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
+.c-parag {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 26px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-parag {
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 48px;
+  }
+}
+
+/* --------------------- 4.4 Footer --------------------- */
+/**
+ * ---------------------------------------------------
+ * 	5.  Objects
+ * ---------------------------------------------------
+ */
+/**
+ * ---------------------------------------------------
+ * 	6.  Components
+ * ---------------------------------------------------
+ */
+/* --------------------- 6.1 Buttons --------------------- */
+.c-button {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border: none;
+  letter-spacing: 2.8px;
+  height: 45px;
+  padding: 0 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-button {
+    height: 55px;
+  }
+}
+
+/* --------------------- 6.2 Inputs --------------------- */
+.c-input-text {
+  font-size: 16px;
+  font-size: 1.6rem;
+  border: none;
+  height: 45px;
+  padding-left: 11px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-input-text {
+    font-size: 20px;
+    font-size: 2rem;
+    height: 55px;
+  }
+}
+
+/* --------------------- 6.3 Article --------------------- */
+@media (min-width: 768px) {
+  .c-article {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .c-article__content {
+    text-align: left;
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__content {
+    max-width: 600px;
+    margin-top: 92px;
+    margin-left: 95px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .c-article__content {
+    margin-top: 100px;
+    margin-left: 167px;
+  }
+}
+
+/**
+ * ---------------------------------------------------
+ * 	7.  Utilities
+ * ---------------------------------------------------
+ */
+/**
+ * ---------------------------------------------------
+ * 	8.  Pages
+ * ---------------------------------------------------
+ */
+/* --------------------- 8.1 Home Page Contoso --------------------- */
+body {
+  text-align: center;
+}
+
+.c-input-text {
+  border-radius: 8px 0 0 8px;
+}
+
+.c-button {
+  border-radius: 0 8px 8px 0;
+}
+/*# sourceMappingURL=style.css.map */

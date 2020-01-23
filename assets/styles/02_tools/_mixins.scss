@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/*
+Author     : stefano
+Description: Purpose of the stylesheet follows.
+*/
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+    @if $point==desktop--lg--max {
+        @media screen and (min-width: 1380px) {
+            @content;
+        }
+    }
+    @if $point==desktop--lg {
+        @media screen and (min-width: 1140px) {
+            @content;
+        }
+    }
+    @if $point==desktop {
+        @media screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $point==tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}
+
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+
+/*********************
+BOX-MODEL
+*********************/
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+
+/* Borders */
+
+@mixin radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
