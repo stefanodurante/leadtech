@@ -2,58 +2,78 @@
 // This file contains styles that are specific to the home page.
 // --
 body {
+    background:$bg-color;
+    color:$primary-color;
     text-align: center;
+    font-family:$font-secondary;
+
 }
 
 .c-main {
-  
-}
-
-.c-social-nav {
-   
-}
-
-.c-social-nav__list {
-  
-}
-
-.c-social-nav__item {
-   
-}
-
-.c-social-nav__link {
     
+    max-width:1140px;
+    width:100%;
 }
-
-.c-header {
-    
-}
-
-.c-logo {
-    
-}
-
 
 .c-section {
-
+    height:505px;
+    &__trip {
+        height:460px;
+    }
 }
 
-.c-article__picture {
-
+.c-article {
+    @include flexbox();
+    @include flex-direction(column);
+    height:100%;
+}
+.c-article__visa {
+    background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
+    background-size:100% 150px, auto 100%;
+    background-position: top center, 35% 150px;
+    background-repeat:no-repeat, no-repeat;
+    padding:6.5rem 4rem 4rem;
 }
 
-.c-picture {
+.c-article__trip {
+    @include align-items(flex-start);
+    @include justify-content(center);
+    background-image: url(./../images/background.jpg);
+    background-position: 25% center;
+    background-repeat: no-repeat;
+    background-size: auto 230%;
+    padding:0 2rem;
+    text-align: left;
+}
+
+.c-h1 {
+    @include font-size(4);
+    margin-top: auto;
+    font-family:$font-primary;
+    font-weight:700;
+    line-height:90%;
+    text-align:left;
+}
+.c-logo {
+    background-image: url('./../images/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:140px;
+    width:140px;
+    margin: 0 auto;
+    @include breakpoint(tablet){
+        height:200px;
+        width:200px;
+    }
+}
+
+.c-tags__list {
+    @include flexbox();
+    @include flex-wrap(wrap);
     
 }
-
-.c-cta {
-    
-}
-
-.c-input-text {
-    border-radius: 8px 0 0 8px;
-}
-
-.c-button {
-    border-radius: 0 8px 8px 0;
+.c-tag__item {
+    @include font-size(2);
+    font-style:italic;
+    margin-right:.5ch;
 }
