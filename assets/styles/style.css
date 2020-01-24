@@ -47,7 +47,7 @@ BOX-MODEL
 /**
  * Set up a decent box model on the root element
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap");
 html {
   -webkit-box-sizing: border-box;
@@ -351,14 +351,102 @@ dd {
  */
 /* --------------------- 8.1 Home Page Contoso --------------------- */
 body {
+  background: #205E5D;
+  color: white;
   text-align: center;
+  font-family: "Merriweather";
 }
 
-.c-input-text {
-  border-radius: 8px 0 0 8px;
+.c-main {
+  max-width: 1140px;
+  width: 100%;
 }
 
-.c-button {
-  border-radius: 0 8px 8px 0;
+.c-section {
+  height: 505px;
+}
+
+.c-section__trip {
+  height: 460px;
+}
+
+.c-article {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.c-article__visa {
+  background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
+  background-size: 100% 150px, auto 100%;
+  background-position: top center, 35% 150px;
+  background-repeat: no-repeat, no-repeat;
+  padding: 6.5rem 4rem 4rem;
+}
+
+.c-article__trip {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  background-image: url(./../images/background.jpg);
+  background-position: 25% center;
+  background-repeat: no-repeat;
+  background-size: auto 230%;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.c-h1 {
+  font-size: 40px;
+  font-size: 4rem;
+  margin-top: auto;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 90%;
+  text-align: left;
+}
+
+.c-logo {
+  background-image: url("./../images/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 140px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.c-tags__list {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c-tag__item {
+  font-size: 20px;
+  font-size: 2rem;
+  font-style: italic;
+  margin-right: .5ch;
 }
 /*# sourceMappingURL=style.css.map */
