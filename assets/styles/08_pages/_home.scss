@@ -20,7 +20,7 @@ body {
 }
 
 .c-section {
-    height: 505px;
+    height: 506px;
     @include breakpoint(desktop) {
         height: 672px;
         width: 384px;
@@ -78,10 +78,22 @@ body {
             z-index: 1;
         }
         @include breakpoint(desktop) {
+            &:after {
+                content: '';
+                background-image: url(./../images/background.jpg);
+                background-size: 300% auto;
+                background-position: left -5rem;
+                background-repeat: no-repeat;
+                height: 480px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
             @include justify-content(flex-start);
-            background-image: url(./../images/background.jpg), url(./../images/background.jpg);
-            background-size: auto 480px, auto 106%;
-            background-position: left top, left bottom;
+            background-image: url(./../images/background.jpg);
+            background-size: auto 106%;
+            background-position: left bottom;
         }
     }
     &__moonwalker {
