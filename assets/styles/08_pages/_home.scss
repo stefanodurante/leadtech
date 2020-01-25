@@ -8,6 +8,16 @@ body {
     font-family: $font-secondary;
 }
 
+.c-wrapp {
+    height: 100%;
+    @include breakpoint(desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
 .c-main {
     margin: 0 auto;
     /*max-width: 1140px;*/
@@ -54,6 +64,7 @@ body {
         @include breakpoint(desktop) {
             background-image: url(./../images/rock.jpg);
             background-size: cover;
+            background-position: right top;
             position: relative;
         }
     }

@@ -356,6 +356,25 @@ body {
   font-family: "Merriweather";
 }
 
+.c-wrapp {
+  height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
 .c-main {
   margin: 0 auto;
   /*max-width: 1140px;*/
@@ -437,6 +456,7 @@ body {
   .c-article__visa {
     background-image: url(./../images/rock.jpg);
     background-size: cover;
+    background-position: right top;
     position: relative;
   }
 }
