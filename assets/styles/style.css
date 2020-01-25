@@ -194,18 +194,7 @@ dd {
 /* --------------------- 4.1 Header --------------------- */
 /* --------------------- 4.2 headings --------------------- */
 .c-h2 {
-  font-size: 24px;
-  font-size: 2.4rem;
   line-height: 1.17;
-  margin-bottom: 9px;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-h2 {
-    font-size: 48px;
-    font-size: 4.8rem;
-    margin-bottom: 30px;
-  }
 }
 
 /* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
@@ -358,20 +347,58 @@ body {
 }
 
 .c-main {
+  margin: 0 auto;
   max-width: 1140px;
   width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-main {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    justify-content: center;
+  }
 }
 
 .c-section {
   height: 505px;
 }
 
+@media screen and (min-width: 1024px) {
+  .c-section {
+    height: 672px;
+    width: 384px;
+  }
+}
+
 .c-section__trip {
   height: 460px;
 }
 
+@media screen and (min-width: 1024px) {
+  .c-section__trip {
+    height: 672px;
+    width: 328px;
+  }
+}
+
 .c-section__moonwalker {
   height: 280px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-section__moonwalker {
+    height: 672px;
+  }
 }
 
 .c-article {
@@ -393,6 +420,13 @@ body {
   background-size: 100% 150px, auto 100%;
   background-position: top center, 35% 150px;
   padding: 6.5rem 4rem 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__visa {
+    background-image: url(./../images/rock.jpg);
+    background-size: cover;
+  }
 }
 
 .c-article__trip {
@@ -422,6 +456,15 @@ body {
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__trip {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .c-article__moonwalker {
