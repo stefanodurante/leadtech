@@ -9,17 +9,35 @@ body {
 }
 
 .c-main {
-    max-width: 1140px;
+    margin: 0 auto;
+    /*max-width: 1140px;*/
     width: 100%;
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+    }
 }
 
 .c-section {
     height: 505px;
+    @include breakpoint(desktop) {
+        height: 672px;
+        width: 384px;
+    }
     &__trip {
         height: 460px;
+        @include breakpoint(desktop) {
+            height: 672px;
+            width: 328px;
+        }
     }
     &__moonwalker {
         height: 280px;
+        @include breakpoint(desktop) {
+            height: 672px;
+            width: 700px;
+        }
     }
 }
 
@@ -33,6 +51,11 @@ body {
         background-size: 100% 150px, auto 100%;
         background-position: top center, 35% 150px;
         padding: 6.5rem 4rem 4rem;
+        @include breakpoint(desktop) {
+            background-image: url(./../images/rock.jpg);
+            background-size: cover;
+            position: relative;
+        }
     }
     &__trip {
         @include align-items(flex-start);
@@ -54,11 +77,52 @@ body {
             width: 100%;
             z-index: 1;
         }
+        @include breakpoint(desktop) {
+            @include justify-content(flex-start);
+            background-image: url(./../images/background.jpg), url(./../images/background.jpg);
+            background-size: auto 480px, auto 106%;
+            background-position: left top, left bottom;
+        }
     }
     &__moonwalker {
         background-image: url(./../images/background.jpg);
         background-position: -210px bottom;
         background-size: 400%;
+        @include breakpoint(desktop) {
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(flex-end);
+            @include align-items(flex-start);
+            background-position: right bottom;
+            background-size: 150% auto;
+            position: relative;
+            z-index: 1;
+            width: 700px;
+            &:before,
+            &:after {
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+            }
+            &:before {
+                content: '';
+                background-image: url(./../images/background.jpg);
+                background-position: center -5rem;
+                background-size: auto 150%;
+                height: 480px;
+                left: 0;
+                width: 330px;
+            }
+            &:after {
+                content: '';
+                background-image: url(./../images/rocket.png);
+                background-position: center top;
+                background-size: auto 480px;
+                height: 100%;
+                left: 330px;
+                width: calc(100% - 330px);
+            }
+        }
     }
 }
 
@@ -69,6 +133,20 @@ body {
     font-weight: 700;
     line-height: 90%;
     text-align: left;
+    @include breakpoint(desktop) {
+        @include font-size(8);
+        left: 28rem;
+        position: absolute;
+        top: 48%;
+        white-space: nowrap;
+        z-index: 2;
+    }
+}
+
+.c-h2 {
+    @include font-size(2.5);
+    line-height: 168%;
+    font-weight: 600
 }
 
 .c-logo {
@@ -81,6 +159,7 @@ body {
     @include breakpoint(tablet) {
         height: 200px;
         width: 200px;
+        margin-left: 10rem;
     }
 }
 
@@ -97,20 +176,23 @@ body {
     &:before {
         background-image: url('./../images/icon_rocket.png');
         height: 97px;
-        top: -104px;
+        top: -95px;
     }
     &:after {
         background: $secondary-color;
-        bottom: -1px;
+        bottom: -3px;
         height: 3px;
         width: 94px;
+    }
+    @include breakpoint(desktop) {
+        margin-top: 14rem;
     }
 }
 
 .c-tags__list {
     @include flexbox();
     @include flex-wrap(wrap);
-    margin-top: 1.5rem;
+    margin-top: 1.8rem;
     margin-bottom: 9.5rem;
     z-index: 2;
 }
@@ -119,4 +201,75 @@ body {
     @include font-size(2);
     font-style: italic;
     margin-right: .5ch;
+}
+
+.c-slider-controls {
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        background: $secondary-bg;
+        height: 260px;
+        padding: 7rem 5rem 2.4rem;
+        margin-bottom: -6.8rem;
+        width: 330px;
+    }
+}
+
+.c-loading {
+    background: $primary-color;
+    height: 3px;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.c-bar {
+    background: $secondary-color;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 30%;
+}
+
+.c-nav {
+    margin-top: auto;
+    width: 100%;
+}
+
+.c-nav__list {
+    @include flexbox();
+    @include justify-content(space-between);
+}
+
+.c-nav__item {
+    @include font-size(1.8);
+}
+
+.c-nav__link {
+    color: $primary-color;
+    display: block;
+    line-height: 3rem;
+    position: relative;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.c-nav__link-ease {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 3px;
+        left: 0;
+        width: 100%;
+        background: $primary-color;
+    }
+    &:hover {
+        &:after {
+            background: $secondary-color;
+        }
+    }
 }
