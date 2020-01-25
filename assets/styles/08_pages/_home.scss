@@ -2,78 +2,121 @@
 // This file contains styles that are specific to the home page.
 // --
 body {
-    background:$bg-color;
-    color:$primary-color;
+    background: $bg-color;
+    color: $primary-color;
     text-align: center;
-    font-family:$font-secondary;
-
+    font-family: $font-secondary;
 }
 
 .c-main {
-    
-    max-width:1140px;
-    width:100%;
+    max-width: 1140px;
+    width: 100%;
 }
 
 .c-section {
-    height:505px;
+    height: 505px;
     &__trip {
-        height:460px;
+        height: 460px;
+    }
+    &__moonwalker {
+        height: 280px;
     }
 }
 
 .c-article {
     @include flexbox();
     @include flex-direction(column);
-    height:100%;
-}
-.c-article__visa {
-    background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
-    background-size:100% 150px, auto 100%;
-    background-position: top center, 35% 150px;
-    background-repeat:no-repeat, no-repeat;
-    padding:6.5rem 4rem 4rem;
-}
-
-.c-article__trip {
-    @include align-items(flex-start);
-    @include justify-content(center);
-    background-image: url(./../images/background.jpg);
-    background-position: 25% center;
     background-repeat: no-repeat;
-    background-size: auto 230%;
-    padding:0 2rem;
-    text-align: left;
+    height: 100%;
+    &__visa {
+        background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
+        background-size: 100% 150px, auto 100%;
+        background-position: top center, 35% 150px;
+        padding: 6.5rem 4rem 4rem;
+    }
+    &__trip {
+        @include align-items(flex-start);
+        @include justify-content(flex-end);
+        background-image: url(./../images/background.jpg);
+        background-position: 25% center;
+        background-size: auto 230%;
+        padding: 0 2rem;
+        position: relative;
+        text-align: left;
+        z-index: 1;
+        &:before {
+            content: '';
+            background: rgba(0, 0, 0, 0.1);
+            left: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+    &__moonwalker {
+        background-image: url(./../images/background.jpg);
+        background-position: -210px bottom;
+        background-size: 400%;
+    }
 }
 
 .c-h1 {
     @include font-size(4);
     margin-top: auto;
-    font-family:$font-primary;
-    font-weight:700;
-    line-height:90%;
-    text-align:left;
+    font-family: $font-primary;
+    font-weight: 700;
+    line-height: 90%;
+    text-align: left;
 }
+
 .c-logo {
     background-image: url('./../images/logo.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height:140px;
-    width:140px;
+    height: 140px;
+    width: 140px;
     margin: 0 auto;
-    @include breakpoint(tablet){
-        height:200px;
-        width:200px;
+    @include breakpoint(tablet) {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.c-icon__rocket {
+    position: relative;
+    z-index: 2;
+    &:before,
+    &:after {
+        content: '';
+        left: -3px;
+        position: absolute;
+        width: 99px;
+    }
+    &:before {
+        background-image: url('./../images/icon_rocket.png');
+        height: 97px;
+        top: -104px;
+    }
+    &:after {
+        background: $secondary-color;
+        bottom: -1px;
+        height: 3px;
+        width: 94px;
     }
 }
 
 .c-tags__list {
     @include flexbox();
     @include flex-wrap(wrap);
-    
+    margin-top: 1.5rem;
+    margin-bottom: 9.5rem;
+    z-index: 2;
 }
+
 .c-tag__item {
     @include font-size(2);
-    font-style:italic;
-    margin-right:.5ch;
+    font-style: italic;
+    margin-right: .5ch;
 }

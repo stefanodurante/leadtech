@@ -370,6 +370,10 @@ body {
   height: 460px;
 }
 
+.c-section__moonwalker {
+  height: 280px;
+}
+
 .c-article {
   display: -webkit-box;
   display: -moz-flex;
@@ -380,6 +384,7 @@ body {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background-repeat: no-repeat;
   height: 100%;
 }
 
@@ -387,7 +392,6 @@ body {
   background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
   background-size: 100% 150px, auto 100%;
   background-position: top center, 35% 150px;
-  background-repeat: no-repeat, no-repeat;
   padding: 6.5rem 4rem 4rem;
 }
 
@@ -396,16 +400,34 @@ body {
   -ms-flex-align: start;
   -moz-align-items: flex-start;
   align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
   background-image: url(./../images/background.jpg);
   background-position: 25% center;
-  background-repeat: no-repeat;
   background-size: auto 230%;
   padding: 0 2rem;
+  position: relative;
   text-align: left;
+  z-index: 1;
+}
+
+.c-article__trip:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.1);
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.c-article__moonwalker {
+  background-image: url(./../images/background.jpg);
+  background-position: -210px bottom;
+  background-size: 400%;
 }
 
 .c-h1 {
@@ -434,6 +456,31 @@ body {
   }
 }
 
+.c-icon__rocket {
+  position: relative;
+  z-index: 2;
+}
+
+.c-icon__rocket:before, .c-icon__rocket:after {
+  content: '';
+  left: -3px;
+  position: absolute;
+  width: 99px;
+}
+
+.c-icon__rocket:before {
+  background-image: url("./../images/icon_rocket.png");
+  height: 97px;
+  top: -104px;
+}
+
+.c-icon__rocket:after {
+  background: #19BD9C;
+  bottom: -1px;
+  height: 3px;
+  width: 94px;
+}
+
 .c-tags__list {
   display: -webkit-box;
   display: -moz-flex;
@@ -441,6 +488,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 9.5rem;
+  z-index: 2;
 }
 
 .c-tag__item {
