@@ -34,9 +34,11 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include breakpoint(desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
