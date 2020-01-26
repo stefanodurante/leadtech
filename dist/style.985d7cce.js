@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/rock.jpg":[["rock.653931b0.jpg","assets/images/rock.jpg"],"assets/images/rock.jpg"],"./../images/rocket.png":[["rocket.6582becc.png","assets/images/rocket.png"],"assets/images/rocket.png"],"./../images/background.jpg":[["background.61b7e8ea.jpg","assets/images/background.jpg"],"assets/images/background.jpg"],"./../images/logo.png":[["logo.3f4a1874.png","assets/images/logo.png"],"assets/images/logo.png"],"./../images/icon_rocket.png":[["icon_rocket.50b0b561.png","assets/images/icon_rocket.png"],"assets/images/icon_rocket.png"],"_css_loader":"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/rock.jpg":[["rock.653931b0.jpg","assets/images/rock.jpg"],"assets/images/rock.jpg"],"./../images/background.jpg":[["background.61b7e8ea.jpg","assets/images/background.jpg"],"assets/images/background.jpg"],"./../images/logo.png":[["logo.3f4a1874.png","assets/images/logo.png"],"assets/images/logo.png"],"./../images/icon_rocket.png":[["icon_rocket.50b0b561.png","assets/images/icon_rocket.png"],"assets/images/icon_rocket.png"],"_css_loader":"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
