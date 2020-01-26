@@ -432,7 +432,7 @@ body {
 }
 
 .c-article__visa {
-  background-image: url(./../images/rock.jpg), url(./../images/rocket.png);
+  background-image: url(/rock.653931b0.jpg), url(/rocket.6582becc.png);
   background-size: 100% 150px, auto 100%;
   background-position: top center, 35% 150px;
   padding: 6.5rem 4rem 4rem;
@@ -440,7 +440,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .c-article__visa {
-    background-image: url(./../images/rock.jpg);
+    background-image: url(/rock.653931b0.jpg);
     background-size: cover;
     background-position: right top;
     position: relative;
@@ -456,7 +456,7 @@ body {
   -ms-flex-pack: end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
-  background-image: url(./../images/background.jpg);
+  background-image: url(/background.61b7e8ea.jpg);
   background-position: 25% center;
   background-size: auto 230%;
   padding: 0 2rem;
@@ -482,13 +482,13 @@ body {
     -ms-flex-pack: start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
-    background-image: url(./../images/background.jpg);
+    background-image: url(/background.61b7e8ea.jpg);
     background-size: auto 106%;
     background-position: left bottom;
   }
   .c-article__trip:after {
     content: '';
-    background-image: url(./../images/background.jpg);
+    background-image: url(/background.61b7e8ea.jpg);
     background-size: 300% auto;
     background-position: left -5rem;
     background-repeat: no-repeat;
@@ -501,7 +501,7 @@ body {
 }
 
 .c-article__moonwalker {
-  background-image: url(./../images/background.jpg);
+  background-image: url(/background.61b7e8ea.jpg);
   background-position: -210px bottom;
   background-size: 400%;
 }
@@ -538,7 +538,7 @@ body {
   }
   .c-article__moonwalker:before {
     content: '';
-    background-image: url(./../images/background.jpg);
+    background-image: url(/background.61b7e8ea.jpg);
     background-position: center -5rem;
     background-size: auto 150%;
     height: 480px;
@@ -577,7 +577,7 @@ body {
 }
 
 .c-logo {
-  background-image: url("./../images/logo.png");
+  background-image: url("/logo.3f4a1874.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 140px;
@@ -606,7 +606,7 @@ body {
 }
 
 .c-icon__rocket:before {
-  background-image: url("./../images/icon_rocket.png");
+  background-image: url("/icon_rocket.50b0b561.png");
   height: 97px;
   top: -95px;
 }
@@ -772,4 +772,6 @@ body {
   opacity: 1;
   visibility: visible;
 }
-/*# sourceMappingURL=style.css.map */
+
+
+/*# sourceMappingURL=/style.985d7cce.css.map */

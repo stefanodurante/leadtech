@@ -136,15 +136,15 @@ body {
                 left: 0;
                 width: 330px;
             }
-            &:after {
-                content: '';
-                background-image: url(./../images/rocket.png);
-                background-position: center top;
-                background-size: auto 480px;
-                height: 100%;
-                left: 330px;
-                width: calc(100% - 330px);
-            }
+            // &:after {
+            //     content: '';
+            //     background-image: url(./../images/rocket.png);
+            //     background-position: center top;
+            //     background-size: auto 480px;
+            //     height: 100%;
+            //     left: 330px;
+            //     width: calc(100% - 330px);
+            // }
         }
     }
 }
@@ -294,5 +294,46 @@ body {
         &:after {
             background: $secondary-color;
         }
+    }
+}
+
+.c-slider {
+    @include breakpoint(desktop) {
+        height: 480px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.c-img__wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.c-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide-entry {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms;
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
