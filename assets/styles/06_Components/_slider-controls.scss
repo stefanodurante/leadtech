@@ -1,0 +1,12 @@
+.c-slider-controls {
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        background: $secondary-bg;
+        height: 260px;
+        padding: 7rem 5rem 2.4rem;
+        margin-bottom: -6.8rem;
+        width: 330px;
+    }
+}

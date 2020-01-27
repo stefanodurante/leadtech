@@ -28,11 +28,11 @@ BOX-MODEL
 		4.2 Headings
 		4.3 Parags
 		4.4 Footer
-	5. Objects
-		5.1 Buttons
+	
 	6. Components
-		6.1 Buttons
-		6.1 Forms elements
+		6.1 Article
+		6.2 List
+		6.3 Nav
 	7. Utilities
 		7.1 utilities
 
@@ -151,11 +151,352 @@ h6 {
   font-weight: 700;
 }
 
-dd {
-  margin-left: 25px;
+/**
+ * ---------------------------------------------------
+ * 	4. Elements
+ * ---------------------------------------------------
+ */
+/* --------------------- 4.1 headings --------------------- */
+.c-h1 {
+  font-size: 40px;
+  font-size: 4rem;
+  bottom: 4rem;
+  font-family: "Montserrat";
+  left: 4rem;
+  line-height: 90%;
+  position: absolute;
+  text-align: left;
 }
 
-/* --------------------- 3.4 Helpers --------------------- */
+@media screen and (min-width: 1024px) {
+  .c-h1 {
+    font-size: 80px;
+    font-size: 8rem;
+    left: -42rem;
+    bottom: 2rem;
+    white-space: nowrap;
+    z-index: 2;
+  }
+}
+
+.c-h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 168%;
+  font-weight: 600;
+}
+
+/**
+ * ---------------------------------------------------
+ * 	5.  Objects
+ * ---------------------------------------------------
+ */
+/**
+ * ---------------------------------------------------
+ * 	6.  Components
+ * ---------------------------------------------------
+ */
+/* --------------------- 6.1 Article --------------------- */
+.c-article {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+}
+
+.c-article__visa {
+  background-image: url(./../images/rock.jpg);
+  background-size: 100% 150px;
+  background-position: top center;
+  padding: 6.5rem 4rem 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__visa {
+    background-image: url(./../images/rock.jpg);
+    background-size: cover;
+    background-position: right top;
+    position: relative;
+  }
+}
+
+.c-article__trip {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  background-image: url(./../images/background.jpg);
+  background-position: 16% 100%;
+  background-size: auto 130%;
+  padding: 0 2rem;
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+.c-article__trip:before {
+  content: '';
+  background: rgba(33, 95, 94, 0.4);
+  left: 0;
+  height: 460px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__trip:before {
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__trip {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    background-image: url(./../images/background.jpg);
+    background-size: auto 108%;
+    background-position: left bottom;
+  }
+}
+
+.c-article__moonwalker {
+  background-image: url(./../images/background.jpg);
+  background-position: -210px bottom;
+  background-size: 400%;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-article__moonwalker {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    background-position: right bottom;
+    background-size: 150% auto;
+    position: relative;
+    z-index: 2;
+    width: 700px;
+  }
+}
+
+/* --------------------- 6.2 Logo --------------------- */
+.c-logo {
+  background-image: url("./../images/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 140px;
+  width: 140px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 21;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 200px;
+    width: 200px;
+    margin-right: 3rem;
+  }
+}
+
+/* --------------------- 6.3 List --------------------- */
+.c-tags__list {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+  margin-bottom: 9.5rem;
+  z-index: 2;
+}
+
+.c-tag__item {
+  font-size: 20px;
+  font-size: 2rem;
+  font-style: italic;
+  margin-right: .5ch;
+}
+
+/* --------------------- 6.4 Nav --------------------- */
+.c-nav {
+  margin-top: auto;
+  width: 100%;
+}
+
+.c-nav__list {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.c-nav__item {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.c-nav__link {
+  color: white;
+  display: block;
+  line-height: 3rem;
+  position: relative;
+}
+
+.c-nav__link:hover {
+  color: #19BD9C;
+}
+
+.c-nav__link-ease:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  left: 0;
+  width: 100%;
+  background: white;
+}
+
+.c-nav__link-ease:hover:after {
+  background: #19BD9C;
+}
+
+/* --------------------- 6.5 Slider --------------------- */
+@media screen and (min-width: 1024px) {
+  .c-slider {
+    height: 480px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.c-img__wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.c-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide-entry {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -70rem;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.slide-entry.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --------------------- 6.6 Loading --------------------- */
+.c-loading {
+  background: white;
+  height: 3px;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.c-bar {
+  background: #19BD9C;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+/* --------------------- 6.7 --------------------- */
+.c-icon__rocket {
+  position: relative;
+  z-index: 2;
+}
+
+.c-icon__rocket:before, .c-icon__rocket:after {
+  content: '';
+  left: -3px;
+  position: absolute;
+  width: 99px;
+}
+
+.c-icon__rocket:before {
+  background-image: url("./../images/icon_rocket.png");
+  height: 97px;
+  top: -95px;
+}
+
+.c-icon__rocket:after {
+  background: #19BD9C;
+  bottom: -3px;
+  height: 3px;
+  width: 94px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-icon__rocket {
+    margin-top: 14rem;
+  }
+}
+
+/**
+ * ---------------------------------------------------
+ * 	7.  Utilities
+ * ---------------------------------------------------
+ */
 .u-show--mobile {
   display: block;
 }
@@ -188,153 +529,10 @@ dd {
 
 /**
  * ---------------------------------------------------
- * 	4. Elements
- * ---------------------------------------------------
- */
-/* --------------------- 4.1 Header --------------------- */
-/* --------------------- 4.2 headings --------------------- */
-/* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
-.c-parag {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  margin: 0 0 26px;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-parag {
-    font-size: 24px;
-    font-size: 2.4rem;
-    margin-bottom: 48px;
-  }
-}
-
-/* --------------------- 4.4 Footer --------------------- */
-/**
- * ---------------------------------------------------
- * 	5.  Objects
- * ---------------------------------------------------
- */
-/**
- * ---------------------------------------------------
- * 	6.  Components
- * ---------------------------------------------------
- */
-/* --------------------- 6.1 Buttons --------------------- */
-.c-button {
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  font-size: 14px;
-  font-size: 1.4rem;
-  border: none;
-  letter-spacing: 2.8px;
-  height: 45px;
-  padding: 0 22px;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-button {
-    height: 55px;
-  }
-}
-
-/* --------------------- 6.2 Inputs --------------------- */
-.c-input-text {
-  font-size: 16px;
-  font-size: 1.6rem;
-  border: none;
-  height: 45px;
-  padding-left: 11px;
-  width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-input-text {
-    font-size: 20px;
-    font-size: 2rem;
-    height: 55px;
-  }
-}
-
-/* --------------------- 6.3 Article --------------------- */
-@media (min-width: 768px) {
-  .c-article {
-    display: -webkit-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    -moz-align-items: flex-end;
-    align-items: flex-end;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -moz-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    -moz-align-items: flex-end;
-    align-items: flex-end;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    -moz-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    -moz-justify-content: flex-start;
-    justify-content: flex-start;
-  }
-}
-
-@media (min-width: 768px) {
-  .c-article__content {
-    text-align: left;
-    max-width: 360px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article__content {
-    max-width: 600px;
-    margin-top: 92px;
-    margin-left: 95px;
-  }
-}
-
-@media screen and (min-width: 1140px) {
-  .c-article__content {
-    margin-top: 100px;
-    margin-left: 167px;
-  }
-}
-
-/**
- * ---------------------------------------------------
- * 	7.  Utilities
- * ---------------------------------------------------
- */
-/**
- * ---------------------------------------------------
  * 	8.  Pages
  * ---------------------------------------------------
  */
-/* --------------------- 8.1 Home Page Contoso --------------------- */
+/* --------------------- 8.1 Home Page --------------------- */
 body {
   background: #215f5e;
   color: white;
@@ -442,235 +640,6 @@ body {
   }
 }
 
-.c-article {
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-repeat: no-repeat;
-  height: 100%;
-  position: relative;
-}
-
-.c-article__visa {
-  background-image: url(./../images/rock.jpg);
-  background-size: 100% 150px;
-  background-position: top center;
-  padding: 6.5rem 4rem 4rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article__visa {
-    background-image: url(./../images/rock.jpg);
-    background-size: cover;
-    background-position: right top;
-    position: relative;
-  }
-}
-
-.c-article__trip {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -moz-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  background-image: url(./../images/background.jpg);
-  background-position: 16% 100%;
-  background-size: auto 130%;
-  padding: 0 2rem;
-  position: relative;
-  text-align: left;
-  z-index: 1;
-}
-
-.c-article__trip:before {
-  content: '';
-  background: rgba(33, 95, 94, 0.4);
-  left: 0;
-  height: 460px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article__trip:before {
-    height: 480px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article__trip {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    -moz-justify-content: flex-start;
-    justify-content: flex-start;
-    background-image: url(./../images/background.jpg);
-    background-size: auto 108%;
-    background-position: left bottom;
-  }
-  .c-article__trip:after {
-    content: '';
-    background-image: url(./../images/background.jpg);
-    background-size: 310% auto;
-    background-position: left -10rem;
-    background-repeat: no-repeat;
-    height: 480px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-}
-
-.c-article__moonwalker {
-  background-image: url(./../images/background.jpg);
-  background-position: -210px bottom;
-  background-size: 400%;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-article__moonwalker {
-    display: -webkit-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    -moz-justify-content: flex-end;
-    justify-content: flex-end;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    -moz-align-items: flex-start;
-    align-items: flex-start;
-    background-position: right bottom;
-    background-size: 150% auto;
-    position: relative;
-    z-index: 2;
-    width: 700px;
-  }
-  .c-article__moonwalker:before, .c-article__moonwalker:after {
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-  }
-}
-
-.c-h1 {
-  font-size: 40px;
-  font-size: 4rem;
-  bottom: 4rem;
-  font-family: "Montserrat";
-  font-weight: 700;
-  left: 4rem;
-  line-height: 90%;
-  position: absolute;
-  text-align: left;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-h1 {
-    font-size: 80px;
-    font-size: 8rem;
-    left: -42rem;
-    bottom: 2rem;
-    white-space: nowrap;
-    z-index: 2;
-  }
-}
-
-.c-h2 {
-  font-size: 25px;
-  font-size: 2.5rem;
-  line-height: 168%;
-  font-weight: 600;
-}
-
-.c-logo {
-  background-image: url("./../images/logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 140px;
-  width: 140px;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 21;
-  left: 0;
-  right: 0;
-}
-
-@media (min-width: 768px) {
-  .c-logo {
-    height: 200px;
-    width: 200px;
-    margin-left: 10rem;
-  }
-}
-
-.c-icon__rocket {
-  position: relative;
-  z-index: 2;
-}
-
-.c-icon__rocket:before, .c-icon__rocket:after {
-  content: '';
-  left: -3px;
-  position: absolute;
-  width: 99px;
-}
-
-.c-icon__rocket:before {
-  background-image: url("./../images/icon_rocket.png");
-  height: 97px;
-  top: -95px;
-}
-
-.c-icon__rocket:after {
-  background: #19BD9C;
-  bottom: -3px;
-  height: 3px;
-  width: 94px;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-icon__rocket {
-    margin-top: 14rem;
-  }
-}
-
-.c-tags__list {
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.8rem;
-  margin-bottom: 9.5rem;
-  z-index: 2;
-}
-
-.c-tag__item {
-  font-size: 20px;
-  font-size: 2rem;
-  font-style: italic;
-  margin-right: .5ch;
-}
-
 @media screen and (min-width: 1024px) {
   .c-slider-controls {
     display: -webkit-box;
@@ -692,112 +661,5 @@ body {
     margin-bottom: -6.8rem;
     width: 330px;
   }
-}
-
-.c-loading {
-  background: white;
-  height: 3px;
-  position: relative;
-  margin: 0 auto;
-  width: 90%;
-}
-
-.c-bar {
-  background: #19BD9C;
-  height: 3px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50%;
-}
-
-.c-nav {
-  margin-top: auto;
-  width: 100%;
-}
-
-.c-nav__list {
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.c-nav__item {
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-
-.c-nav__link {
-  color: white;
-  display: block;
-  line-height: 3rem;
-  position: relative;
-}
-
-.c-nav__link:hover {
-  color: #19BD9C;
-}
-
-.c-nav__link-ease:after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  height: 3px;
-  left: 0;
-  width: 100%;
-  background: white;
-}
-
-.c-nav__link-ease:hover:after {
-  background: #19BD9C;
-}
-
-@media screen and (min-width: 1024px) {
-  .c-slider {
-    height: 480px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
-.c-img__wrapper {
-  height: 100%;
-  width: 100%;
-}
-
-.c-img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.slide-entry {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: -70rem;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 20;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.slide-entry.active {
-  left: 0;
-  opacity: 1;
-  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

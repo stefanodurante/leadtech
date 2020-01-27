@@ -1,0 +1,40 @@
+.c-nav {
+    margin-top: auto;
+    width: 100%;
+}
+
+.c-nav__list {
+    @include flexbox();
+    @include justify-content(space-between);
+}
+
+.c-nav__item {
+    @include font-size(1.8);
+}
+
+.c-nav__link {
+    color: $primary-color;
+    display: block;
+    line-height: 3rem;
+    position: relative;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.c-nav__link-ease {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 3px;
+        left: 0;
+        width: 100%;
+        background: $primary-color;
+    }
+    &:hover {
+        &:after {
+            background: $secondary-color;
+        }
+    }
+}

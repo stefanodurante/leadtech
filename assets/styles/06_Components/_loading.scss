@@ -1,0 +1,16 @@
+.c-loading {
+    background: $primary-color;
+    height: 3px;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.c-bar {
+    background: $secondary-color;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}

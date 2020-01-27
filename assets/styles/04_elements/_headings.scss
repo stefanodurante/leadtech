@@ -1,3 +1,22 @@
+.c-h1 {
+    @include font-size(4);
+    bottom: 4rem;
+    font-family: $font-primary;
+    left: 4rem;
+    line-height: 90%;
+    position: absolute;
+    text-align: left;
+    @include breakpoint(desktop) {
+        @include font-size(8);
+        left: -42rem;
+        bottom: 2rem;
+        white-space: nowrap;
+        z-index: 2;
+    }
+}
+
 .c-h2 {
-    @include breakpoint(desktop) {}
+    @include font-size(2.5);
+    line-height: 168%;
+    font-weight: 600
 }

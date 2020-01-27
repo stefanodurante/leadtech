@@ -1,0 +1,17 @@
+.c-logo {
+    background-image: url('./../images/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 21;
+    left: 0;
+    right: 0;
+    @include breakpoint(tablet) {
+        height: 200px;
+        width: 200px;
+        margin-right: 3rem;
+    }
+}

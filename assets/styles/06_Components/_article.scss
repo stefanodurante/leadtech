@@ -1,29 +1,65 @@
 .c-article {
-    @include breakpoint(tablet) {
-        @include flexbox();
-        @include align-items(flex-end);
-        @include justify-content(space-between);
-        @include align-items(flex-end);
-        width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    &__visa {
+        background-image: url(./../images/rock.jpg);
+        background-size: 100% 150px;
+        background-position: top center;
+        padding: 6.5rem 4rem 4rem;
+        @include breakpoint(desktop) {
+            background-image: url(./../images/rock.jpg);
+            background-size: cover;
+            background-position: right top;
+            position: relative;
+        }
     }
-    @include breakpoint(desktop) {
+    &__trip {
         @include align-items(flex-start);
-        @include justify-content(flex-start);
-    }
-}
-
-.c-article__content {
-    @include breakpoint(tablet) {
+        @include justify-content(center);
+        background-image: url(./../images/background.jpg);
+        background-position: 16% 100%;
+        background-size: auto 130%;
+        padding: 0 2rem;
+        position: relative;
         text-align: left;
-        max-width: 360px;
+        z-index: 1;
+        &:before {
+            content: '';
+            background: rgba(33, 95, 94, 0.4);
+            left: 0;
+            height: 460px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            @include breakpoint(desktop) {
+                height: 480px;
+            }
+        }
+        @include breakpoint(desktop) {
+            @include justify-content(flex-start);
+            background-image: url(./../images/background.jpg);
+            background-size: auto 108%;
+            background-position: left bottom;
+        }
     }
-    @include breakpoint(desktop) {
-        max-width: 600px;
-        margin-top: 92px;
-        margin-left: 95px;
-    }
-    @include breakpoint(desktop--lg) {
-        margin-top: 100px;
-        margin-left: 167px;
+    &__moonwalker {
+        background-image: url(./../images/background.jpg);
+        background-position: -210px bottom;
+        background-size: 400%;
+        @include breakpoint(desktop) {
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(flex-end);
+            @include align-items(flex-start);
+            background-position: right bottom;
+            background-size: 150% auto;
+            position: relative;
+            z-index: 2;
+            width: 700px;
+        }
     }
 }
