@@ -103,8 +103,8 @@ body {
             &:after {
                 content: '';
                 background-image: url(./../images/background.jpg);
-                background-size: 330% auto;
-                background-position: left -5rem;
+                background-size: 310% auto;
+    background-position: left -10rem;
                 background-repeat: no-repeat;
                 height: 480px;
                 position: absolute;
@@ -114,7 +114,7 @@ body {
             }
             @include justify-content(flex-start);
             background-image: url(./../images/background.jpg);
-            background-size: auto 92%;
+            background-size: auto 108%;
             background-position: left bottom;
         }
     }
@@ -138,24 +138,8 @@ body {
                 position: absolute;
                 top: 0;
             }
-            &:before {
-                content: '';
-                background-image: url(./../images/background.jpg);
-                background-position: center -5rem;
-                background-size: auto 150%;
-                height: 480px;
-                left: 0;
-                width: 330px;
-            }
-            // &:after {
-            //     content: '';
-            //     background-image: url(./../images/rocket.png);
-            //     background-position: center top;
-            //     background-size: auto 480px;
-            //     height: 100%;
-            //     left: 330px;
-            //     width: calc(100% - 330px);
-            // }
+            
+            
         }
     }
 }
@@ -171,8 +155,8 @@ body {
     text-align: left;
     @include breakpoint(desktop) {
         @include font-size(8);
-        left: -40rem;
-        bottom: 1rem;
+        left: -42rem;
+        bottom: 2rem;
         white-space: nowrap;
         z-index: 2;
     }
@@ -269,7 +253,9 @@ body {
     left: 0;
     position: absolute;
     top: 0;
-    width: 30%;
+    width: 50%;
+
+
 }
 
 .c-nav {
@@ -339,7 +325,7 @@ body {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -70rem;
     right: 0;
     margin: 0 auto;
     text-align: center;
@@ -348,6 +334,7 @@ body {
     visibility: hidden;
     transition: 300ms;
     &.active {
+        left:0;
         opacity: 1;
         visibility: visible;
     }
